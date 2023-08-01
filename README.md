@@ -1,11 +1,11 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 4: Data-backed solutions for combating West Nile Virus in Chicago
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Capstone Project: AI Squat Training Assistant
 
-### **Try Out our West Nile Virus Streamlit Application by clicking the link below.**
-# [West Nile Virus Interactive EDA and Predictor](https://west-nile-virus-dashboard-d99.streamlit.app/)
+### **Try Out AI Squat Streamlit Application by clicking the link below.**
+# [AI Squat Training Assistant](https://ai-squat-assistant.onrender.com/)
 
 <br>
 
-| **Concerning Numbers** | **Social Cost per Hospitalised Person**  |
+| **The Rest State** | **The Down State**  |
 | ------------------------ | -----------------------  |
 | ![Concerning Numbers](https://github.com/khammingfatt/project-4-data-backed-solutions-for-combating-wnv-in-chicago/blob/main/images/Concerning%20Numbers.jpg?raw=true)| ![Social Cost Loss per Person](https://github.com/khammingfatt/project-4-data-backed-solutions-for-combating-wnv-in-chicago/blob/main/images/Social%20Cost%20Loss%20per%20Person.jpg?raw=true) |
 
