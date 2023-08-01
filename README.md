@@ -131,7 +131,7 @@ By employing this systematic approach, we aimed to enhance the quality and relia
 
 Leveraging the power of machine learning, we have developed an advanced predictive model to effectively correct the squat posture. We invite you to delve into the comprehensive details of our proposal outlined below, which showcase the technical prowess and formal methodologies employed in our solution.
 
-| **Prescription Messages** | **Problems to be Solved**  |
+| **Prescription Messages** | **Mitigate Potential Injury**  |
 | ------------------------ | -----------------------  |
 |![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/Squat%20Training.png?raw=true)|![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/Prescriptions.jpg?raw=true) |
 
