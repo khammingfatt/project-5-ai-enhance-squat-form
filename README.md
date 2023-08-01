@@ -2,58 +2,56 @@
 
 ### **Try Out AI Squat Streamlit Application by clicking the link below.**
 # [AI Squat Training Assistant](https://ai-squat-assistant.onrender.com/)
+Project management and planning documentation is done via Github Projects here: https://github.com/khammingfatt/project-5-ai-enhance-squat-form
 
 <br>
 
-| **The Rest State** | **The Down State**  |
+| **The 'Rest' State** | **The 'Down' State**  |
 | ------------------------ | -----------------------  |
-| ![Concerning Numbers](https://github.com/khammingfatt/project-4-data-backed-solutions-for-combating-wnv-in-chicago/blob/main/images/Concerning%20Numbers.jpg?raw=true)| ![Social Cost Loss per Person](https://github.com/khammingfatt/project-4-data-backed-solutions-for-combating-wnv-in-chicago/blob/main/images/Social%20Cost%20Loss%20per%20Person.jpg?raw=true) |
+| ![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/Readme%20table%201.jpg?raw=true)| ![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/Readme%20table%202.jpg?raw=true) |
 
 <br>
 
 ## Content Directory:
 - [Background](#Background)
-- [Exploratory Data Analysis](#Exploratory-Data-Analysis)
-- [Data Preprocessing](#Data-Preprocessing)
-- [Modeling](#Modeling)
-- [Key Recommendations](#Key-Recommendations)
+- [Data Import](#Data-Import)
+- [Manual Modeling](#Manual-Modeling)
+- [Modeling and Hyperparameters Tuning](#Modeling-and-Hyperparameters-Tuning)
+- [Model Evaluation](#Model-Evaluation)
 
 <br>
 
 
 ## Background
-West Nile virus (WNV) is an infectious viral disease transmitted by mosquitoes, which can lead to flu-like symptoms, neurological complications, and potentially fatal illnesses in humans.
+![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/straits_times.jpg?raw=true)
 
-In the year 2002, the initial human cases of West Nile virus were reported in the city of Chicago. Subsequently, the City of Chicago and the **Chicago Department of Public Health (CDPH)** took significant measures to establish a comprehensive surveillance and control program. This program has been diligently maintained and remains in operation to this day. Over the course of 12 years, substantial efforts have been invested in combating the spread of West Nile Virus, resulting in the accumulation of a vast amount of data by the **CDPH**. This rich dataset now serves as a valuable resource for making evidence-based decisions.
+The **Sit to Stand Test** serves as an assessment tool for evaluating leg strength and endurance among older adults. It is an integral component of the Fullerton Functional Fitness Test Battery. The development of this test aimed to address the floor effect encountered in the five or ten repetition sit to stand test when applied to older adults.
+
+![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/sit-stand-test.jpg?raw=true)
+
+The muscle groups engaged during both the sit to stand test and squats exhibit **considerable similarity, encompassing the legs, thighs, and back muscles**. 
+
+![Alt text](https://github.com/khammingfatt/project-5-ai-enhance-squat-form/blob/main/images/muscle-group.jpg?raw=true)
+
+**Therefore, engaging in squat training can significantly enhance performance in the sit-and-stand test, thereby contributing to individuals' overall longevity and well-being.**
 
 Reference Website
-- [Centre for Disease Control and Prevention](https://www.cdc.gov/about/index.html)
-- [Chicago Department of Public Health](https://www.chicago.gov/city/en/depts/cdph.html)
+- [Simple sit-and-rise test predicts how long you'll live](https://www.straitstimes.com/singapore/health/simple-sit-and-rise-test-predicts-how-long-youll-live)
+- [Why Squats Are The King of All Exercises](https://medium.com/@leanwaistwarrior/why-squats-are-the-king-of-all-exercises-4621119900b0)
 
 <br>
+
 
 
 ## Problem Statement
-We, **Data Nine-Nine**, have been engaged as a third-party consulting firm by the **Centre for Disease Control and Prevention (CDC)** to collaborate on a comprehensive review of their West Nile virus (WNV) control efforts. Our objective is to
+### The project aims to empower individuals to improve their health and fitness by offering an AI option to 
 
-	(1) build machine learning model to predict the presence of WNV; 
+### (i) perform correct squats independently without an exercise coach;
 
-	(2) providing valuable insights and recommendations to further enhance their strategies 
-<br>
+### (ii) assess their squat performance;
 
-in combatting the West Nile virus outbreak.
+### (iii) enhance their squat performance by using AI to provide prescriptive feedback to the squat form.
 
-<br>
-
-## Project Deliverables
-Our project is centered around the following objectives:
-
-1. Conduct comprehensive **research** on the occurrence and prevalence of the West Nile virus in the city of Chicago.
-2. Develop and **train a machine learning model** capable of accurately predicting the probability of the presence of the West Nile virus.
-3. Share our **insights and recommendations** with the esteemed members of the Centers for Disease Control and Prevention (CDC), including biostatisticians and epidemiologists.
-4. Provide a thorough **cost-benefit analysis** to support the CDC members in making informed decisions based on data-driven recommendations for the future.
-
-Project management and planning documentation is done via Github Projects here: https://github.com/users/khammingfatt/projects/1/views/1
 
 <br>
 
@@ -73,67 +71,23 @@ Public health workers in Chicago setup mosquito traps scattered across the city.
 <br>
 
 ## Data Dictionary
-| Feature                   | Type    | Dataset                       | Description                                 |   
-|---------------------------|---------|-------------------------------|---------------------------------------------|
-| year                      | integer | train_merge_df, test_merge_df | Year that the WNV test is performed         |   
-| month                     | integer | train_merge_df, test_merge_df | Month that the WNV test is performed        |   
-| day                       | integer | train_merge_df, test_merge_df | Day of month that the WNV test is performed |   
-| week                      | integer | train_merge_df, test_merge_df | Week that the WNV is performed              |   
-| dayofweek                 | integer | train_merge_df, test_merge_df | Day of week that the WNV is performed       |  
-| dayofyear                 | integer | train_merge_df, test_merge_df | Day of year that the WNV is performed       |   
-| address                   | object  | train_merge_df, test_merge_df | Approximate address of the location of trap. This is used to send to the GeoCoder.  |   
-| species                   | object  | train_merge_df, test_merge_df | Species of mosquitos                        |   
-| block                     | integer | train_merge_df, test_merge_df | Block number                                |   
-| street                    | object  | train_merge_df, test_merge_df | Street name                                 |   
-| trap                      | object  | train_merge_df, test_merge_df | Id of the Mosquito trap                         |   
-| address_number_and_street | object  | train_merge_df, test_merge_df | Address number and street name              |   
-| latitude                  | float   | train_merge_df, test_merge_df | Latitude returned from GeoCoder                   |   
-| longitude                 | float   | train_merge_df, test_merge_df | Longitude returned from GeoCoder            |   
-| address_accuracy          | integer | train_merge_df, test_merge_df | Accuracy returned from GeoCoder      |   
-| wnv_present               | integer | train_merge_df                | Whether West Nile Virus was present in these mosquitos. 1 means WNV is present, and 0 means not present.     |   
-| num_mosquitos             | integer | train_merge_df                | Number of mosquitoes caught in this trap |   
-| station                   | integer | train_merge_df, test_merge_df | Weather station number                     |   
-| stat_1_tmax               | integer | train_merge_df, test_merge_df | Max temperature at Station 1                      |   
-| stat_1_tmin               | integer | train_merge_df, test_merge_df | Min temperature at Station 1             |   
-| stat_1_tavg               | float   | train_merge_df, test_merge_df | Average temperature at Station 1                |   
-| stat_1_precip_total       | float   | train_merge_df, test_merge_df | Total precipitation at Station 1           |   
-| day_length_mprec          | float   | train_merge_df, test_merge_df | Day duration in minutes                      |  
-| day_length_nearh          | float   | train_merge_df, test_merge_df | Day duration in hours             |   
-| sunrise_hours             | float   | train_merge_df, test_merge_df | Sunrise timing in hours                    |   
-| sunset_hours              | float   | train_merge_df, test_merge_df | Sunset timing in hours                     |   
-| yearweek                  | integer | train_merge_df, test_merge_df | Week number of the year                     |   
-| weekpreciptotal           | float   | train_merge_df, test_merge_df | Weekly total precipitation                    |   
-| weekavgtemp               | float   | train_merge_df, test_merge_df | Weekly average temperature                       |   
-| r_humid                   | integer | train_merge_df, test_merge_df | Relative humidity                        |   
-| templag1                  | float   | train_merge_df, test_merge_df | Temperature, lagged by 1 week (brought forward) |   
-| templag2                  | float   | train_merge_df, test_merge_df | Temperature, lagged by 21 weeks (brought forward) |   
-| templag3                  | float   | train_merge_df, test_merge_df | Temperature, lagged by 3 weeks (brought forward) |   
-| templag4                  | float   | train_merge_df, test_merge_df | Temperature, lagged by 4 weeks (brought forward) |   
-| rainlag1                  | float   | train_merge_df, test_merge_df | Rainfall, lagged by 1 week  |   
-| rainlag2                  | float   | train_merge_df, test_merge_df | Rainfall, lagged by 2 weeks  |   
-| rainlag3                  | float   | train_merge_df, test_merge_df | Rainfall, lagged by 3 weeks   |   
-| rainlag4                  | float   | train_merge_df, test_merge_df | Rainfall, lagged by 4 weeks            |   
-| humidlag1                 | float   | train_merge_df, test_merge_df | Relative humidity, lagged by 1 week  |   
-| humidlag2                 | float   | train_merge_df, test_merge_df | Relative humidity, lagged by 2 weeks  |  
-| humidlag3                 | float   | train_merge_df, test_merge_df | Relative humidity, lagged by 3 weeks   |   
-| humidlag4                 | float   | train_merge_df, test_merge_df | Relative humidity, lagged by 4 weeks     |  
-| mixed_tmax                | float   | train_merge_df, test_merge_df | The mean maximum temperature from both weather stations |   
-| mixed_tmin                | float   | train_merge_df, test_merge_df | The mean minimum temperature from both weather stations |   
-| mixed_precip_total        | float   | train_merge_df, test_merge_df | The mean maximum temperature from both weather stations |   
-| mixed_weekpreciptotal     | float   | train_merge_df, test_merge_df | The mean weekly total precipitation from both weather stations |   
-| mixed_weekavgtemp         | float   | train_merge_df, test_merge_df | The mean weekly average temperature from both weather stations  |   
-| mixed_r_humid             | float   | train_merge_df, test_merge_df | The mean relative humidity from both weather stations |   
-| stat_2_tmax               | integer | train_merge_df, test_merge_df | Max temperature at Station 2  |   |
-| stat_2_tmin               | integer | train_merge_df, test_merge_df | Min temperature at Station 2   |   
-| stat_2_tavg               | float   | train_merge_df, test_merge_df | Average temperature at Station 2    | 
-| stat_2_precip_total       | float   | train_merge_df, test_merge_df | Total precipitation at Station 2      |  
-| id                        | integer | test_merge_df                 | The ID of the record                        |  
-| Date |datetime |spray_df|  Date of the spray|
-| Time |object|spray_df| Time of the spray|
-| Latitude|float|spray_df| Latitude of the spray|
-| Longitude|float|spray_df| Longitude of the spray|
+| Feature | Type | Dataset | Description |
+| :--- | :--- | :--- | :---|
+| class | str | coords | the label of the coordinates |
+| x1 | int | coords | x-coordinate of the landmark 1: nose |
+| y1 | int | coords | y-coordinate of the landmark 1: nose |
+| z1 | int | coords | z-coordinate of the landmark 1: nose |
+| v1 | int | coords | visibility of the landmark in computer vision |
+| ... | ... | ... | ... |
+| x33 | int | coords | x-coordinate of the landmark 33: nose |
+| y33 | int | coords | y-coordinate of the landmark 33: nose |
+| z33 | int | coords | z-coordinate of the landmark 33: nose |
+| v33 | int | coords | visibility of landmark 33 in computer vision |
 
+<br>
 
+<br>
+With reference to the diagram above, we have 33 landmarks and 133 columns of data in total. 
 
 ---
 
