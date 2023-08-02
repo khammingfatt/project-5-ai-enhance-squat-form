@@ -14,10 +14,10 @@ Project management and planning documentation is done via Github Projects here: 
 
 ## Content Directory:
 - [Background](#Background)
-- [Data Import](#Data-Import)
-- [Manual Modeling](#Manual-Modeling)
-- [Modeling and Hyperparameters Tuning](#Modeling-and-Hyperparameters-Tuning)
-- [Model Evaluation](#Model-Evaluation)
+- [Problem Statement](#Problem-Statement)
+- [Data Collection](#Data-Collection)
+- [Modeling](#Modeling)
+- [Key Recommendations](#Key-Recommendations)
 
 <br>
 
@@ -59,9 +59,7 @@ Reference Website
 ---
 
 ## Datasets:
-Public health workers in Chicago setup mosquito traps scattered across the city. The captured mosquitos are tested for the presence of West Nile virus.
-
-* [`coords.csv`](../assets/train.csv): The "coords.csv" dataset comprises coordinates of dataset collected 
+* [`coords.csv`](../data/coords.csv): The "coords.csv" dataset comprises coordinates of dataset collected 
 
 <br>
 
