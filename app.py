@@ -1,4 +1,4 @@
-# cd C:\Users\LENOVO YOGA CORE I5\Documents\2023\1 Data Science Immersive\Projects\Capstone Projects\Streamlit
+# C:\Users\LENOVO YOGA CORE I5\Documents\2023\1 Data Science Immersive\Projects\project-5-ai-enhance-squat-form
 # conda prompt: streamlit run app.py
 
 import streamlit as st
