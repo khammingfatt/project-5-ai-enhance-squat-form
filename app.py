@@ -6,8 +6,8 @@ import streamlit as st
 # This page works like a main entry page of the streamlit app
 st.title('AI Squat Training Assistant Demonstration')
 
-recorded_file = 'correct_demo.mp4'
-output_file = 'squat_counter_output_demo.mp4'
+recorded_file = 'images/correct_demo.mp4'
+output_file = 'images/squat_counter_output_demo.mp4'
 
 col1, col2 = st.columns(2)
 
