@@ -19,6 +19,10 @@ from streamlit_webrtc import VideoTransformerBase, webrtc_streamer
 from sklearn.preprocessing import LabelEncoder
 import os
 
+# ------------------------------------------Get the directory path of the current script----------------------------------------------
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 # --------------------------------------------------------Initialising All Variables------------------------------------------------------
 
 class PoseDetectionTransformer(VideoTransformerBase):
@@ -27,11 +31,15 @@ class PoseDetectionTransformer(VideoTransformerBase):
         self.mp_pose = mp.solutions.pose
         self.pose = self.mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
-        with open('../data/squat_2.pkl', 'rb') as f:
+        # Setting up relative path to the two files
+        pkl_file_path = os.path.join(current_dir, '..', 'data')
+        
+        # Load the squat_2 trained model
+        with open(os.path.join(pkl_file_path, 'squat_2.pkl'), 'rb') as f:
             self.model = pickle.load(f)
         
         # Load the label encoder
-        with open('../data/label_encoder.pkl', 'rb') as f:
+        with open(os.path.join(pkl_file_path, 'label_encoder.pkl'), 'rb') as f:
             self.label_encoder = pickle.load(f)
         
         # Initialize counter and current_stage variables
