@@ -102,7 +102,7 @@ class PoseDetectionTransformer(VideoTransformerBase):
         try: 
             if class_label == "Rest" and proba[proba.argmax()] > 0.7: 
                 self.current_stage = "Rest" 
-            elif self.current_stage == "Rest" and class_label == "Down" and proba[proba.argmax()] > 0.7:
+            elif self.current_stage == "Rest" and class_label == "Down" and proba[proba.argmax()] > 0.85:
                 self.current_stage = "Down" 
                 self.counter += 1 
 
