@@ -1,7 +1,7 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Capstone Project: AI Squat Training Assistant
 
 ### **Try Out AI Squat Streamlit Application by clicking the link below.**
-# [AI Squat Training Assistant](https://ai-squat-assistant.onrender.com/)
+# [AI Squat Training Assistant](https://www.youtube.com/watch?v=vP1TkOnrTHE)
 Project management and planning documentation is done via Github Projects here: https://github.com/khammingfatt/project-5-ai-enhance-squat-form
 
 <br>

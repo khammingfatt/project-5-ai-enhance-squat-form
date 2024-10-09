@@ -16,7 +16,6 @@ import pickle
 import numpy as np
 import tempfile
 from streamlit_webrtc import VideoTransformerBase, webrtc_streamer
-from sklearn.preprocessing import LabelEncoder
 import os
 
 # ------------------------------------------Get the directory path of the current script----------------------------------------------
